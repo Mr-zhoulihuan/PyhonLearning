@@ -1,0 +1,5 @@
+
+一、关于Python解释器 ---打印操作
+ 在python解释上 关于print的 跨行打印 原来一般打印的是使用双引号的，print(""" My name is 
+ you are very handsame)就可以实现跨行打印输出
+ 
