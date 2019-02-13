@@ -1,0 +1,29 @@
+文件夹的遍历操作目前掌握的有两种常用的
+
+一、第一种
+import glob 
+import os
+def Text():
+    #遍历文件夹下文件获取文件路径全称
+    a=os.getcwd()  #获取文件的当前目录
+    for root,dirs,file in os.walk(a):
+        print(root) #打印文件根目录
+        print(dirs) #打印文件夹名
+        for index, xmlfile in enumerate(file):
+            path = os.path.join(root, xmlfile) #将文件目录名称和文件名进行合并
+            path,filename = os.path.split(path)#家文件目录名称和文件名进行拆开
+            print(path)#打印文件目录名称
+            print(filename)#打印文件名
+if __name__ == "__main__":
+    Text()
+一般正常情况第种比较用的多也比较好理解
+
+二、第二种
+
+就是前面代码里面导入的库 import glob 模块 该模块对常见的通配符起作用 ". * ? [表范围]"
+import glob 
+def Text1():
+    filepath = glob.glob('*.py')
+    print(filepath)  #打印当前路径下所有.py文件名 返回是一个列表
+if __name__ == "__main__":
+    Text1()
