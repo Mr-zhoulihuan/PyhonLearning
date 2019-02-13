@@ -34,3 +34,13 @@ def Text1():
             os.rename(b,newname)#重命名
 if __name__ == "__main__":
     Text1()
+
+三、第三种
+获取文件路径放置列表中--适合文件少比较好处理
+def Text2():
+    filepath = glob.glob('*.py')
+    print(filepath)  #打印当前路径下所有.py文件名
+    a= [os.path.realpath(f) for f in filepath]
+    print(a)
+if __name__ == "__main__":
+    Text2()
