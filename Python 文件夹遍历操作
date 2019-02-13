@@ -29,5 +29,8 @@ def Text1():
         a,b= os.path.splitext(file)#切割文件名
         print(a) #去除文件后缀名剩余内容
         print(b) #得到文件后缀名
+        if b ==".py":#批量修改文件后缀名
+            newname = ".txt"
+            os.rename(b,newname)#重命名
 if __name__ == "__main__":
     Text1()
