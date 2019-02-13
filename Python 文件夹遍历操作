@@ -25,5 +25,9 @@ import glob
 def Text1():
     filepath = glob.glob('*.py')
     print(filepath)  #打印当前路径下所有.py文件名 返回是一个列表
+    for file in filepath:
+        a,b= os.path.splitext(file)#切割文件名
+        print(a) #去除文件后缀名剩余内容
+        print(b) #得到文件后缀名
 if __name__ == "__main__":
     Text1()
